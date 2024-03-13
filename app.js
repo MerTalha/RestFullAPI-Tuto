@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/order');
 
-mongoose.connect('mongodb+srv://merttalha:' + process.env.MONGO_ATLAS_PW +'@node-rest.ogmk73k.mongodb.net/?retryWrites=true&w=majority&appName=node-rest'
+mongoose.connect('mongodb+srv://merttalha:' + 
+    process.env.MONGO_ATLAS_PW +
+    '@node-rest.ogmk73k.mongodb.net/?retryWrites=true&w=majority&appName=node-rest'+
     {
         useMongoClient: true
     }
