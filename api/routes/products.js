@@ -64,9 +64,18 @@ router.patch('/:productId', (req, res, next) => {
     });
 });
 
-router.delete('/:productId', (req, res, next) => {
-    res.status(200).json({
-        message: 'Deleted Product'
-    });
+router.delete("/:productId", (req, res, next) => {
+    const id = req.params.productId;
+    Product.deleteOne({_id: id})
+        .exec()
+        .then(result =>{
+            res.status(200).json(result);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error:err
+            });
+        });
 });
 module.exports = router;
