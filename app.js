@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
-const orderRoutes = require('./api/routes/order');
+const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb+srv://merttalha:' + 
     process.env.MONGO_ATLAS_PW +
