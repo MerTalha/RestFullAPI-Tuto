@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 
 const Order = require('../models/order');
 const Product = require('../models/product');
-const product = require('../models/product');
 
 router.get('/', (req, res, next) =>{
     Order.find()
